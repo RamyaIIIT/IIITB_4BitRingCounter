@@ -1,2 +1,2 @@
-# IIITB_FourBitRingCounter
+# IIITB_4BitRingCounter
 ASIC Assignment
