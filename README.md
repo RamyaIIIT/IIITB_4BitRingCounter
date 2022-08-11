@@ -60,7 +60,7 @@ To clone the Repository and download the Netlist files for Simulation, enter the
 $   sudo apt install -y git
 $   git clone https://github.com/RamyaIIIT/IIITB_4BitRingCounter
 $   cd IIITB_4BitRingCounter
-$   iverilog Iiiitb_4bit_ring_counter.v iiitb_4bit_ring_counter_tb.v
+$   iverilog iiiitb_4bit_ring_counter.v iiitb_4bit_ring_counter_tb.v
 $   ./a.out
 $   gtkwave pwm.vcd
 ```
