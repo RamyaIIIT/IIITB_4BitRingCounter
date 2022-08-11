@@ -71,39 +71,6 @@ Simulation Results for the 4 bit ring counter
   <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/184102635-3ec15b46-aecf-467f-ba94-2ee77ec147cf.png">
 </p>
 
-## synthesis of verilog code
-
-#### About Yosys
-Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
-
-- more at https://yosyshq.net/yosys/
-
-To install yosys follow the instructions in  this github repository
-
-https://github.com/YosysHQ/yosys
-
-- note: Identify the .lib file path in cloned folder and change the path in highlighted text to indentified path
-
-<img width="1119" alt="image" src="https://user-images.githubusercontent.com/110079648/182905357-064fec34-3c2b-4997-a0b7-30453f505ddd.png">
-
-
-
-#### to synthesize
-```
-$   yosys
-$   yosys>    script yosys_run.sh
-```
-
-#### to see diffarent types of cells after synthesys
-```
-$   yosys>    stat
-```
-#### to generate schematics
-```
-$   yosys>    show
-```
-
-
 ## Contributors 
 
 - **Ramya S** 
