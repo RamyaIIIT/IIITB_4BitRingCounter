@@ -26,5 +26,9 @@ module tb_ring;
         #50;       //Wait for 50 ns
         Reset = 0; //Reset is low.
     end
+    initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+    end
       
 endmodule
