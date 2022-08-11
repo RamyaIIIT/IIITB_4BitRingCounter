@@ -3,7 +3,7 @@
 This project simulates the designed 4 bit ring counter. 
 
 ## Introduction
-Pulse Width Modulation is a famous technique used to create modulated electronic pulses of the desired width. The duty cycle is the ratio of how long that PWM signal stays at the high position to the total time period.
+A ring counter is a digital sequential circuit that recirculates the same data throughout the circuit. It is one of the applications of shift register. 
 <p align="center">
   <img width="800" height="500" src="/Images/pwm.jpeg">
 </p>
