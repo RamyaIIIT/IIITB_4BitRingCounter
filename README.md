@@ -1,40 +1,47 @@
 # iiitb_4bit_ring_counter
 
-This project simulates the designed 4 bit ring counter. 
+This project simulates the designed 4 bit ring counter. A ring counter is a digital sequential circuit that recirculates the same data throughout the circuit. It is one of the applications of shift registers.
 
 ## Introduction
-A ring counter is a digital sequential circuit that recirculates the same data throughout the circuit. It is one of the applications of shift register. 
+In this digital world, counters are the most important sequential logic circuits which are used widely in many day-to-day life applications such as microwave ovens, washing machines, digital clocks, timers and in many electronic devices such as frequency dividers, analog to digital converters, triangular waveform generators, etc. Any digital circuit which is used to count the number of occurrences of the input is called counter. The purpose of counters is not only for counting but also for measuring frequency and time.
+Basically, counters are of 2 types: synchronous and asynchronous counters. If the change in transition occurs based on the clock input of the counter, then it is called synchronous counter. If not, then, it is called asynchronous counter. There are many other types of counters, such as decade counter, mod counter, binary counter, ring counter,etc. This paper mainly focuses on the ring counter only.
+
 <p align="center">
-  <img width="800" height="500" src="/Images/pwm.jpeg">
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184100206-85029b36-35d0-40cc-81f4-20be8b8cf800.png">
 </p>
+
 
 ## Applications
 
-Pulse Width Modulated Wave Generator can be used to 
+Ring counters can be used in many applications such as:
 
-- control the brightness of the LED
-- drive buzzers at different loudnes
-- control the angle of the servo motor
-- encode messages in telecommunication
-- used in speed controlers of motors
-
-## Blocked Diagram of PWM GENERATOR
-
-This PWM generator generates 10Mhz signal. We can control duty cycles in steps of 10%. The default duty cycle is 50%. Along with clock signal we provide another two external signals to increase and decrease the duty cycle.
+- Frequency counter
+- ADC
+- Digital clocks
+- Measure timers and rate, etc.
 
 
-<p align="center">
-  <img width="800" height="400" src="/Images/BasicBlockedDeagram.jpeg">
-</p>
+## Blocked Diagram of 4 bit Ring counter
 
-In this specific circuit, we mainly require a n-bit counter and comparator. Duty given to the comparator is compared with the current value of the counter. If current value of counter is lower than duty then comparator results in output high. Similarly, If current value of counter is higher than duty is then comparator results in output low.
-As counter starts at zero, initially comparator gives high output and when counter crosses duty it becomes low. Hence by controlling duty, we can control duty cycle.
+ A ring counter is a synchronous counter which transfers the same data throughout it. It is a typical application of shift register and can be designed using either D or JK flip-flops (FFs). Here, a 4-bit ring counter is designed by a series of 4 D-FFs connected together in feedback manner. That means the output of the last FF is connected to the input of the first FF. The clock signal is applied to all the FFs simultaneously.
+
 
 <p align="center">
-  <img width="800" height="300" src="/Images/BlockDiagram.jpeg">
+  <img width="800" height="400" src="/home/iiitb/Desktop/Ramya/project/IIITB_4BitRingCounter/images/Circuit Diagram.png">
 </p>
 
-As the comparator is a combinational circuit and the counter is sequential, while counting from 011 to 100 due to improper delays there might be an intermediate state like 111 which might be higher or lower than duty. This might cause a glitch. To avoid these glitches output of the comparator is passed through a D flipflop.
+
+Initially all the FFs are at RESET state. When the PRESET is applied, the input of the ring counter becomes 1. Now the output of the first FF (Q3) is 1 and other FF outputs (Q2, Q1 and Q0) will be low. Then for the next clock signal, Q2 becomes 1 and others outputs will be low. In this way, as the clock input changes, the outputs change and the data sequence rotates in the ring counter.
+
+<p align="center">
+  <img width="800" height="300" src="/home/iiitb/Desktop/Ramya/project/IIITB_4BitRingCounter/images/Truth Table.png">
+</p>
+
+State diagram is used to describe the behaviour of the digital sequential circuits. It shows the transitions of states from one state to the next as well as the output for a given input.
+
+<p align="center">
+  <img width="800" height="300" src="/home/iiitb/Desktop/Ramya/project/IIITB_4BitRingCounter/images/State Diagram.png">
+</p>
 
 ## About iverilog 
 Icarus Verilog is an implementation of the Verilog hardware description language.
@@ -56,24 +63,18 @@ $   sudo apt-get install iverilog gtkwave
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
 ```
 $   sudo apt install -y git
-$   git clone https://github.com/sanampudig/iiitb_pwm_gen
-$   cd iiitb_pwm_gen
-$   iverilog iiitb_pwm_gen.v iiitb_pwm_gen_tb.v
+$   git clone https://github.com/RamyaIIIT/IIITB_4BitRingCounter
+$   cd IIITB_4BitRingCounter
+$   iverilog Iiiitb_4bit_ring_counter.v iiitb_4bit_ring_counter_tb.v
 $   ./a.out
 $   gtkwave pwm.vcd
 ```
 
 ## Functional Characteristics
-Simulation Results while increasing Dutycycle
+Simulation Results for the 4 bit ring counter
 <p align="center">
-  <img width="800" height="300" src="/Images/incPWM.jpeg">
+  <img width="800" height="300" src="/home/iiitb/Desktop/Ramya/project/IIITB_4BitRingCounter/images/Simulation.png">
 </p>
-
-Simulation Results while decreasing Dutycycle
-<p align="center">
-  <img width="800" height="300" src="/Images/decPWM.jpeg">
-</p>
-
 
 
 ## synthesis of verilog code
@@ -111,7 +112,7 @@ $   yosys>    show
 
 ## Contributors 
 
-- **Sanampudi Gopala Krishna Reddy** 
+- **Ramya S** 
 - **Kunal Ghosh** 
 
 
@@ -123,9 +124,11 @@ $   yosys>    show
 
 ## Contact Information
 
-- Sanampudi Gopala Krishna Reddy, Postgraduate Student, International Institute of Information Technology, Bangalore  svgkr7@gmail.com
+- Ramya S, Ph.D Student, International Institute of Information Technology, Bangalore. ramya.suriyarani@gmail.com
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 ## References:
-- FPGA4Student
- https://www.fpga4student.com/2017/08/verilog-code-for-pwm-generator.html
+- https://www.electronicshub.org/introduction-to-counters/
+- https://eevibes.com/digital-logic-design/what-are-the-synchronous-and-asynchronous-counters/
+- https://www.geeksforgeeks.org/ring-counter-in-digital-logic/
+- https://verilogcodes.blogspot.com/2015/10/verilog-code-for-4-bit-ring-counter.html
