@@ -29,7 +29,7 @@ Ring counters can be used in many applications such as:
 Initially all the FFs are at RESET state. When the PRESET is applied, the input of the ring counter becomes 1. Now the output of the first FF (Q3) is 1 and other FF outputs (Q2, Q1 and Q0) will be low. Then for the next clock signal, Q2 becomes 1 and others outputs will be low. In this way, as the clock input changes, the outputs change and the data sequence rotates in the ring counter.
 
 <p align="center">
-  <img width="600" height="100" src="https://user-images.githubusercontent.com/110991148/184101589-522df4ae-0d76-4678-a773-fdabf18a67d0.png">
+  <img width="500" height="200" src="https://user-images.githubusercontent.com/110991148/184101589-522df4ae-0d76-4678-a773-fdabf18a67d0.png">
 </p>
 
 State diagram is used to describe the behaviour of the digital sequential circuits. It shows the transitions of states from one state to the next as well as the output for a given input.
@@ -68,7 +68,7 @@ $   gtkwave dump.vcd
 ## Functional Characteristics
 Simulation Results for the 4 bit ring counter
 <p align="center">
-  <img width="1000" height="100" src="https://user-images.githubusercontent.com/110991148/184102635-3ec15b46-aecf-467f-ba94-2ee77ec147cf.png">
+  <img width="800" height="200" src="https://user-images.githubusercontent.com/110991148/184102635-3ec15b46-aecf-467f-ba94-2ee77ec147cf.png">
 </p>
 
 ## Contributors 
