@@ -22,7 +22,7 @@ Ring counters can be used in many applications such as:
 
 
 <p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184100206-85029b36-35d0-40cc-81f4-20be8b8cf800.png">
+  <img width="800" height="400" src="https://user-images.githubusercontent.com/110991148/184100206-85029b36-35d0-40cc-81f4-20be8b8cf800.png">
 </p>
 
 
