@@ -73,8 +73,9 @@ Simulation Results
 
 Post Synthesis Results
 <p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184847413-a84388a4-edcc-49c5-a9fa-b151e08626b7.png>
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
 </p>
+
 
 Netlist
 <p align="center">
