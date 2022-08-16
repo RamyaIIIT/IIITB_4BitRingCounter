@@ -70,12 +70,19 @@ Simulation Results for the 4 bit ring counter
 <p align="center">
   <img width="800" height="200" src="https://user-images.githubusercontent.com/110991148/184102635-3ec15b46-aecf-467f-ba94-2ee77ec147cf.png">
 </p>
+Post Simulation Results
+<p align="center">
+  <img width="800" height="200" src="https://user-images.githubusercontent.com/110991148/184844723-62644e1c-ad41-4201-8135-21a1f626f0ce.png">
+</p>
+<p align="center">
+  <img width="800" height="200" src="https://user-images.githubusercontent.com/110991148/184844858-0e402890-9f47-4009-b632-4f0175463fac.png">
+</p>
+
 
 ## Contributors 
 
 - **Ramya S** 
 - **Kunal Ghosh** 
-
 
 
 ## Acknowledgments
