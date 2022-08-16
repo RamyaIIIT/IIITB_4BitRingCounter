@@ -68,18 +68,18 @@ $   gtkwave dump.vcd
 ## Functional Characteristics
 Simulation Results
 <p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
+  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
 </p>
 
 Post Synthesis Results
 <p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
+  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
 </p>
 
 
 Netlist
 <p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184844858-0e402890-9f47-4009-b632-4f0175463fac.png">
+  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184844858-0e402890-9f47-4009-b632-4f0175463fac.png">
 </p>
 
 
