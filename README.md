@@ -66,11 +66,12 @@ $   gtkwave dump.vcd
 ```
 
 ## Functional Characteristics
-Simulation Results for the 4 bit ring counter
+Simulation Results
 <p align="center">
-  <img width="800" height="200" src="https://user-images.githubusercontent.com/110991148/184102635-3ec15b46-aecf-467f-ba94-2ee77ec147cf.png">
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
 </p>
-Post Simulation Results
+
+Post Synthesis Results
 <p align="center">
   <img width="800" height="500" src="https://user-images.githubusercontent.com/110991148/184844723-62644e1c-ad41-4201-8135-21a1f626f0ce.png">
 </p>
