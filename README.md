@@ -39,7 +39,7 @@ State diagram is used to describe the behaviour of the digital sequential circui
 </p>
 
 ## About iverilog 
-Icarus Verilog is an implementation of the Verilog hardware description language.
+Icarus Verilog is a simulator tool to check the design with the help of test bench. The design is nothing but the Verilog hardware description language code which specifies the functionality. The testbench is the setup to apply stimulus to test the functionality of the design. This simulator looks for the changes to the input. Upon changes to the input, the output is evaluated.
 ## About GTKWave
 GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing
 
@@ -58,8 +58,8 @@ $   sudo apt-get install iverilog gtkwave
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
 ```
 $   sudo apt install -y git
-$   git clone https://github.com/RamyaIIIT/IIITB_4BitRingCounter
-$   cd IIITB_4BitRingCounter
+$   git clone https://github.com/RamyaIIIT/iiitb_4bitrc
+$   cd iiitb_4bitrc
 $   iverilog iiitb_4bit_ring_counter.v iiitb_4bit_ring_counter_tb.v
 $   ./a.out
 $   gtkwave dump.vcd
