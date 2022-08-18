@@ -74,10 +74,9 @@ $   gtkwave dump.vcd
 Synthesis transforms the simple RTL design into a gate-level netlist with all the constraints as specified by the designer. In simple language, Synthesis is a process that converts the abstract form of design to a properly implemented chip in terms of logic gates.
 
 Synthesis takes place in multiple steps:
-
-    Converting RTL into simple logic gates.
-    Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
-    Optimizing the mapped netlist keeping the constraints set by the designer intact
+-   Converting RTL into simple logic gates.
+-   Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
+-   Optimizing the mapped netlist keeping the constraints set by the designer intact
 
 Invoke ''yosys' and execute the below commands to perform the synthesis of the above circuit.
 
@@ -100,22 +99,22 @@ $   ./a.out
 $   gtkwave dump.vcd
 
 ## Functional Characteristics
-Pre Synthesis Simulation Results
+# Pre Synthesis Simulation Results
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
 </p>
 
-Netlist Representation
+# Netlist Representation
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184844858-0e402890-9f47-4009-b632-4f0175463fac.png">
 </p>
 
-Statistics after Synthesis
+# Statistics after Synthesis
 <p align="center">
-  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/185354248-91910694-817b-4bb6-bd3d-b04858487bf4.png">
+  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/185354248-91910694-817b-4bb6-bd3d-b04858487bf4.png">
 </p>
 
-Post Synthesis Simulation Results
+# Post Synthesis Simulation Results
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
 </p>
@@ -127,7 +126,6 @@ Post Synthesis Simulation Results
 
 
 ## Acknowledgments
-
 
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
 
