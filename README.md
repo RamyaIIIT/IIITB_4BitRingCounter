@@ -79,7 +79,7 @@ Synthesis takes place in multiple steps:
 -   Optimizing the mapped netlist keeping the constraints set by the designer intact
 
 Invoke ''yosys' and execute the below commands to perform the synthesis of the above circuit.
-
+```
 $   read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   read_verilog iiitb_4bit_ring_counter.v
 $   synth -top -top ring_counter
@@ -87,17 +87,17 @@ $   dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   abc -liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   show
 $   stat
-
+```
 ### Gate Level Simulation (GLS)
 
 GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
 
 Execute below commands in the project directory to perform GLS.
-
+```
 $   iverilog -DFUNCTIONAL -DUNIT_DELAY=#0 ./verilog_model/primitives.v ./verilog_model/sky130_fd_sc_hd.v
 $   ./a.out
 $   gtkwave dump.vcd
-
+```
 ## Functional Characteristics
 # Pre Synthesis Simulation Results
 <p align="center">
