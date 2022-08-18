@@ -111,7 +111,7 @@ $   gtkwave dump.vcd
 
 # Statistics after Synthesis
 <p align="center">
-  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/185354248-91910694-817b-4bb6-bd3d-b04858487bf4.png">
+  <img width="600" height="300" src="https://user-images.githubusercontent.com/110991148/185354248-91910694-817b-4bb6-bd3d-b04858487bf4.png">
 </p>
 
 # Post Synthesis Simulation Results
