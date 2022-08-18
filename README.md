@@ -16,7 +16,7 @@ Ring counters can be used in many applications such as:
 - Measure timers and rate, etc.
 
 
-## Blocked Diagram of 4 bit Ring counter
+## Block Diagram of 4 bit Ring counter
 
  A ring counter is a synchronous counter which transfers the same data throughout it. It is a typical application of shift register and can be designed using either D or JK flip-flops (FFs). Here, a 4-bit ring counter is designed by a series of 4 D-FFs connected together in feedback manner. That means the output of the last FF is connected to the input of the first FF. The clock signal is applied to all the FFs simultaneously.
 
@@ -41,7 +41,9 @@ State diagram is used to describe the behaviour of the digital sequential circui
 ## About iverilog 
 Icarus Verilog is a simulator tool to check the design with the help of test bench. The design is nothing but the Verilog hardware description language code which specifies the functionality. The testbench is the setup to apply stimulus to test the functionality of the design. This simulator looks for the changes to the input. Upon changes to the input, the output is evaluated.
 ## About GTKWave
-GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing
+GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
+## About yosys
+Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
 ### Installing iverilog and GTKWave
 
@@ -52,7 +54,10 @@ Open your terminal and type the following to install iverilog and GTKWave
 $   sudo apt-get update
 $   sudo apt-get install iverilog gtkwave
 ```
+### Installating yosys
 
+Follow the steps from the below git repository to install yosys on Ubuntu.
+https://github.com/YosysHQ/yosys/blob/master/README.md#installation
 
 ### Functional Simulation
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
@@ -64,24 +69,56 @@ $   iverilog iiitb_4bit_ring_counter.v iiitb_4bit_ring_counter_tb.v
 $   ./a.out
 $   gtkwave dump.vcd
 ```
+### Synthesis
+
+Synthesis transforms the simple RTL design into a gate-level netlist with all the constraints as specified by the designer. In simple language, Synthesis is a process that converts the abstract form of design to a properly implemented chip in terms of logic gates.
+
+Synthesis takes place in multiple steps:
+
+    Converting RTL into simple logic gates.
+    Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
+    Optimizing the mapped netlist keeping the constraints set by the designer intact
+
+Invoke ''yosys' and execute the below commands to perform the synthesis of the above circuit.
+
+$   read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$   read_verilog iiitb_4bit_ring_counter.v
+$   synth -top -top ring_counter
+$   dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$   abc -liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$   show
+$   stat
+
+### Gate Level Simulation (GLS)
+
+GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
+
+Execute below commands in the project directory to perform GLS.
+
+$   iverilog -DFUNCTIONAL -DUNIT_DELAY=#0 ./verilog_model/primitives.v ./verilog_model/sky130_fd_sc_hd.v
+$   ./a.out
+$   gtkwave dump.vcd
 
 ## Functional Characteristics
-Simulation Results
+Pre Synthesis Simulation Results
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
 </p>
 
-Post Synthesis Results
-<p align="center">
-  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
-</p>
-
-
-Netlist
+Netlist Representation
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184844858-0e402890-9f47-4009-b632-4f0175463fac.png">
 </p>
 
+Statistics after Synthesis
+<p align="center">
+  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/185354248-91910694-817b-4bb6-bd3d-b04858487bf4.png">
+</p>
+
+Post Synthesis Simulation Results
+<p align="center">
+  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
+</p>
 
 ## Contributors 
 
