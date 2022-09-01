@@ -42,14 +42,14 @@ State diagram is used to describe the behaviour of the digital sequential circui
 Icarus Verilog is a simulator tool to check the design with the help of test bench. The design is nothing but the Verilog hardware description language code which specifies the functionality. The testbench is the setup to apply stimulus to test the functionality of the design. This simulator looks for the changes to the input. Upon changes to the input, the output is evaluated.
 
 <p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/110991148/187870793-153cd6c8-2e44-4d59-b62c-631ae208ff75.jpg">
+  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187870793-153cd6c8-2e44-4d59-b62c-631ae208ff75.jpg">
 </p>
 
 ## About GTKWave
 GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
 
 <p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/110991148/187870366-ddc387b9-7812-41d5-bf90-9d9e74d0e0c7.jpg">
+  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187870366-ddc387b9-7812-41d5-bf90-9d9e74d0e0c7.jpg">
 </p>
 
 ## About yosys
@@ -57,7 +57,7 @@ GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 whic
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
 <p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/110991148/187871139-df300bc8-4b0d-434b-8a95-1b44657b3e54.jpg">
+  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187871139-df300bc8-4b0d-434b-8a95-1b44657b3e54.jpg">
 </p>
 
 ### Installing iverilog and GTKWave
@@ -94,7 +94,7 @@ Synthesis takes place in multiple steps:
 -   Optimizing the mapped netlist keeping the constraints set by the designer intact
  
  <p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/110991148/187871338-3a5fe0f5-e6ac-4b7a-a663-f6a4755e839f.jpg">
+  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187871338-3a5fe0f5-e6ac-4b7a-a663-f6a4755e839f.jpg">
 </p>
 
 Invoke ''yosys' and execute the below commands to perform the synthesis of the above circuit.
