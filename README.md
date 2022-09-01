@@ -138,6 +138,20 @@ $   gtkwave dump.vcd
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
 </p>
 
+## Physical Design using Openlane
+$ make mount (if this command doesnot go through prefix it with sudo)
+$ ./flow.tcl -interactive
+% package require openlane 0.9
+% prep -design iiitb_4bitrc
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+% run_synthesis
+
+## Synthesis Reports
+<p align="center">
+  <img width="300" height="500" src="https://user-images.githubusercontent.com/110991148/187889381-9620ac5f-be37-45aa-aa9e-1f8ef9d9f439.png">
+</p>
+
 ## Contributors 
 
 - **Ramya S** 
