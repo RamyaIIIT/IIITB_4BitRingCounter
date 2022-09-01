@@ -139,6 +139,7 @@ $   gtkwave dump.vcd
 </p>
 
 ## Physical Design using Openlane
+```
 $ make mount (if this command doesnot go through prefix it with sudo)
 $ ./flow.tcl -interactive
 % package require openlane 0.9
@@ -146,7 +147,7 @@ $ ./flow.tcl -interactive
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 % run_synthesis
-
+```
 ## Synthesis Reports
 <p align="center">
   <img width="500" height="500" src="https://user-images.githubusercontent.com/110991148/187889381-9620ac5f-be37-45aa-aa9e-1f8ef9d9f439.png">
