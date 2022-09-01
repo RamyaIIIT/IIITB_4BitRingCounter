@@ -149,7 +149,7 @@ add_lefs -src $lefs
 
 ## Synthesis Reports
 <p align="center">
-  <img width="300" height="500" src="https://user-images.githubusercontent.com/110991148/187889381-9620ac5f-be37-45aa-aa9e-1f8ef9d9f439.png">
+  <img width="500" height="500" src="https://user-images.githubusercontent.com/110991148/187889381-9620ac5f-be37-45aa-aa9e-1f8ef9d9f439.png">
 </p>
 
 ## Contributors 
