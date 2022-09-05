@@ -43,7 +43,7 @@ Icarus Verilog is a simulator tool to check the design with the help of test ben
 
 
 <p align="center">
-  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/188372955-34ad0c1b-9cfb-48b8-ba87-63d5f3520a2b.png">
+  <img width="500" height="100" src="https://user-images.githubusercontent.com/110991148/188372955-34ad0c1b-9cfb-48b8-ba87-63d5f3520a2b.png">
 </p>
 
 ## About GTKWave
