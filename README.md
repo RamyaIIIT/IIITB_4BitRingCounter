@@ -91,10 +91,10 @@ Synthesis transforms the simple RTL design into a gate-level netlist with all th
 Synthesis takes place in multiple steps:
 -   Converting RTL into simple logic gates.
 -   Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
--   Optimizing the mapped netlist keeping the constraints set by the designer intact
+-   Optimizing the mapped netlist keeping the constraints set by the designer intact.
  
  <p align="center">
-  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187871338-3a5fe0f5-e6ac-4b7a-a663-f6a4755e839f.jpg">
+  <img width="700" height="300" src="https://user-images.githubusercontent.com/110991148/188374162-79803996-5721-4e32-8384-b57866c61275.png">
 </p>
 
 Invoke ''yosys' and execute the below commands to perform the synthesis of the above circuit.
