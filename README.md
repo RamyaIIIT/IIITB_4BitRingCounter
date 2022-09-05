@@ -280,9 +280,10 @@ Refer below image for zoomed view of layout after placement:
   <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188414695-d4c2fd02-9b9c-4d9c-860e-8ff383159fbe.png">
 </p>
 
+
 The zoomed in view of one of the sky130_inv cell is as below:
 <p align="center">
-  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188412479-c022e875-c440-4b7b-8735-03e2e53fce5b.png">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188415615-817d9a23-f554-4b59-bf25-d9dfcd11bf6a.png">
 </p>
 
 ## Clock Tree Synthesis
