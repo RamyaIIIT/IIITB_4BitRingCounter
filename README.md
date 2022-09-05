@@ -227,12 +227,12 @@ Type the following commands to extract Spice netlist
 The layout is generated using OpenLane. To run the custom design on OpenLane, open the OpenLane folder in Terminal and run the following commands:
 ```
 $ cd designs
-$ mkdir iiitb_freqdiv
-$ cd iiitb_freqdiv
+$ mkdir iiitb_4bitrc
+$ cd iiitb_4bitrc
 $ mkdir src
 $ touch config.json
 $ cd src
-$ touch iiitb_freqdiv.v
+$ touch iiitb_4bitrc.v
 ```
 Copy sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib, sky130_fd_sc_hd__typical.lib and sky130_vsdinv.lef files to src folder in your design.
 
@@ -256,17 +256,61 @@ add_lefs -src $lefs
 </p>
 
 ## Floorplan
+Run the floorplan and view the floorplan using the below commands:
 ```
 % run_floorplan
+$ magic -T /home/Ramya/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.min.lef def read iiitb_4bitrc.def &
 ```
 <p align="center">
   <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188394904-13ac4b8c-976b-4530-baa2-cbe57094195f.png">
 </p>
 
-## Contributors 
+## Placement
+Run the placement and view the placement using the below commands:
+```
+% run_placement
+$ magic -T /home/Ramya/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read iiitb_4bitrc.def &
+```
+<p align="center">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188413757-3b3d6d98-826f-413b-8d5a-4c6f6cf5311e.png">
+</p> 
 
-- **Ramya S** 
-- **Kunal Ghosh** 
+Refer below image for zoomed view of layout after placement:
+<p align="center">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188414695-d4c2fd02-9b9c-4d9c-860e-8ff383159fbe.png">
+</p>
+
+The zoomed in view of one of the sky130_inv cell is as below:
+<p align="center">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188412479-c022e875-c440-4b7b-8735-03e2e53fce5b.png">
+</p>
+
+## Clock Tree Synthesis
+
+Run the cts with the below command:
+```
+% run_cts
+```
+## Routing
+Run routing and view the layout using the following commands:
+```
+% run_routing
+$ magic -T /home/Ramya/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read iiitb_4bitrc.def &
+```
+<p align="center">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188413985-3f0be286-4e81-4012-a6c9-a507e0fa4788.png">
+</p>
+
+Refer below image for zoomed view of after routing
+<p align="center">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188414202-ca780027-1323-4885-9dbc-b68cbdaf7473.png">
+</p>
+
+
+## Contributors
+
+- Ramya S 
+- Kunal Ghosh
 
 ## Acknowledgments
 
