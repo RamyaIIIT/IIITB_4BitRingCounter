@@ -49,7 +49,7 @@ Icarus Verilog is a simulator tool to check the design with the help of test ben
 GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
 
 <p align="center">
-  <img width="700" height="400" src="https://user-images.githubusercontent.com/110991148/188373214-2daeec8f-9bad-4f8d-90ba-93c9d239dfcf.png">
+  <img width="900" height="300" src="https://user-images.githubusercontent.com/110991148/188373214-2daeec8f-9bad-4f8d-90ba-93c9d239dfcf.png">
 </p>
 
 ## About yosys
