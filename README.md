@@ -179,36 +179,42 @@ $ make
 $ make test
 ```
 ### Magic Installation
+Before installing Magic, the following softwares have to be installed first:
 ```
-$ sudo apt-get install csh
-$ sudo apt-get install x11
+$ sudo apt-get install csh (to install csh)
 
+$ sudo apt-get install x11 (to install x11/xorg)
 $ sudo apt-get install xorg
-
 $ sudo apt-get install xorg openbox
-$ sudo apt-get install gcc
-$ sudo apt-get install build-essential
-$ sudo apt-get install freeglut3-dev
-$ git clone https://github.com/RTimothyEdwards/magic
 
+$ sudo apt-get install gcc (to install gcc)
+
+$ sudo apt-get install build-essential (to install build-essential)
+
+$ sudo apt-get install freeglut3-dev (to install OpenGL)
+
+$ sudo apt-get install tcl-dev tk-dev (to install tcl/tk)
+
+$ git clone https://github.com/RTimothyEdwards/magic (to install magic)
 $ cd magic
-
 $ ./configure
-
 $ make
-
 $ make install
-$ sudo apt-get install klayout
-$ sudo apt-get install ngspice
+
+$ sudo apt-get install klayout (to install klayout)
+
+$ sudo apt-get install ngspice (to install ngspice)
 ```
-
-
-## Functional Characteristics
-
-
-
-
-
+# Creating Custom Inverter Cell
+```
+$ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+$ cd vsdstdcelldesign
+$  cp ./libs/sky130A.tech sky130A.tech
+$ magic -T sky130A.tech sky130_inv.mag &
+```
+<p align="center">
+  <img width="500" height="500" src="https://user-images.githubusercontent.com/110991148/188389306-2730a27b-a435-4dff-9a03-023520666d01.png">
+</p>
 
 ## Physical Design using Openlane
 ```
