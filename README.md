@@ -57,7 +57,7 @@ GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 whic
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
 <p align="center">
-  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/188373894-09aa0924-e6cb-4f7d-91b7-fb3282ace0b5.png">
+  <img width="700" height="300" src="https://user-images.githubusercontent.com/110991148/188373894-09aa0924-e6cb-4f7d-91b7-fb3282ace0b5.png">
 </p>
 
 ### Installing iverilog and GTKWave
