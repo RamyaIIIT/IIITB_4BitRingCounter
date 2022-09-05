@@ -62,8 +62,6 @@ Yosys is a framework for Verilog RTL synthesis. It currently has extensive Veril
 
 ### Installing iverilog and GTKWave
 
-#### For Ubuntu
-
 Open your terminal and type the following to install iverilog and GTKWave
 ```
 $   sudo apt-get update
@@ -73,7 +71,17 @@ $   sudo apt-get install iverilog gtkwave
 
 Follow the steps from the below git repository to install yosys on Ubuntu.
 https://github.com/YosysHQ/yosys/blob/master/README.md#installation
-
+```
+$ git clone https://github.com/YosysHQ/yosys.git
+$ cd yosys-master
+$ sudo apt install make (If make is not installed please install it)
+$ sudo apt-get install build-essential clang bison flex \
+    libreadline-dev gawk tcl-dev libffi-dev git \
+    graphviz xdot pkg-config python3 libboost-system-dev \
+    libboost-python-dev libboost-filesystem-dev zlib1g-dev
+$ make
+$ sudo make install
+```
 ### Functional Simulation
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
 ```
@@ -84,6 +92,11 @@ $   iverilog iiitb_4bit_ring_counter.v iiitb_4bit_ring_counter_tb.v
 $   ./a.out
 $   gtkwave dump.vcd
 ```
+### Pre Synthesis Simulation Results
+<p align="center">
+  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
+</p>
+
 ### Synthesis
 
 Synthesis transforms the simple RTL design into a gate-level netlist with all the constraints as specified by the designer. In simple language, Synthesis is a process that converts the abstract form of design to a properly implemented chip in terms of logic gates.
@@ -107,22 +120,6 @@ $   abc -liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   show
 $   stat
 ```
-### Gate Level Simulation (GLS)
-
-GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
-
-Execute below commands in the project directory to perform GLS.
-```
-$   iverilog -DFUNCTIONAL -DUNIT_DELAY=#0 ./verilog_model/primitives.v ./verilog_model/sky130_fd_sc_hd.v
-$   ./a.out
-$   gtkwave dump.vcd
-```
-## Functional Characteristics
-### Pre Synthesis Simulation Results
-<p align="center">
-  <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847119-04b0d4cf-a9e6-429c-9742-c6e50a2d298e.png">
-</p>
-
 ### Netlist Representation
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184844858-0e402890-9f47-4009-b632-4f0175463fac.png">
@@ -133,10 +130,85 @@ $   gtkwave dump.vcd
   <img width="600" height="300" src="https://user-images.githubusercontent.com/110991148/185354248-91910694-817b-4bb6-bd3d-b04858487bf4.png">
 </p>
 
+### Gate Level Simulation (GLS)
+
+GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
+
+Execute below commands in the project directory to perform GLS.
+```
+$   iverilog -DFUNCTIONAL -DUNIT_DELAY=#0 ./verilog_model/primitives.v ./verilog_model/sky130_fd_sc_hd.v
+$   ./a.out
+$   gtkwave dump.vcd
+```
+
 ### Post Synthesis Simulation Results
 <p align="center">
   <img width="1000" height="500" src="https://user-images.githubusercontent.com/110991148/184847580-1f5cde40-8194-43ae-bfd3-ef42fb4c948e.png">
 </p>
+
+### Python Installation
+```
+$ sudo apt install -y build-essential python3 python3-venv python3-pip
+```
+### Docker Installation
+```
+$ sudo apt-get remove docker docker-engine docker.io containerd runc (to remove the older version of docker if already installed)
+$ sudo apt-get update
+$ sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release 
+$ sudo mkdir -p /etc/apt/keyrings
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+$ echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null 
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+$ apt-cache madison docker-ce (copy the version string you want to install)
+$ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin (paste the version string copies in place of <VERSION_STRING>)
+$ sudo docker run hello-world (If the docker is successfully installed u will get a success message here)
+```
+
+### OpenLane Installation
+```
+$ git clone https://github.com/The-OpenROAD-Project/OpenLane.git
+$ cd OpenLane/
+$ make
+$ make test
+```
+### Magic Installation
+```
+$ sudo apt-get install csh
+$ sudo apt-get install x11
+
+$ sudo apt-get install xorg
+
+$ sudo apt-get install xorg openbox
+$ sudo apt-get install gcc
+$ sudo apt-get install build-essential
+$ sudo apt-get install freeglut3-dev
+$ git clone https://github.com/RTimothyEdwards/magic
+
+$ cd magic
+
+$ ./configure
+
+$ make
+
+$ make install
+$ sudo apt-get install klayout
+$ sudo apt-get install ngspice
+```
+
+
+## Functional Characteristics
+
+
+
+
+
 
 ## Physical Design using Openlane
 ```
