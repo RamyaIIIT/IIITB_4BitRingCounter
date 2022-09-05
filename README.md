@@ -215,6 +215,26 @@ $ magic -T sky130A.tech sky130_inv.mag &
 <p align="center">
   <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188389306-2730a27b-a435-4dff-9a03-023520666d01.png">
 </p>
+Type the following commands to extract Spice netlist
+
+```
+% extract all
+% ext2spice cthresh 0 rthresh 0
+% ext2spice
+```
+
+# Layout
+The layout is generated using OpenLane. To run the custom design on OpenLane, open the OpenLane folder in Terminal and run the following commands:
+```
+$ cd designs
+$ mkdir iiitb_freqdiv
+$ cd iiitb_freqdiv
+$ mkdir src
+$ touch config.json
+$ cd src
+$ touch iiitb_freqdiv.v
+```
+Copy sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib, sky130_fd_sc_hd__typical.lib and sky130_vsdinv.lef files to src folder in your design.
 
 ## Physical Design using Openlane
 ```
@@ -224,18 +244,29 @@ $ ./flow.tcl -interactive
 % prep -design iiitb_4bitrc
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
+```
+## Synthesis
+```
 % run_synthesis
 ```
+
 ## Synthesis Reports
 <p align="center">
   <img width="500" height="500" src="https://user-images.githubusercontent.com/110991148/187889381-9620ac5f-be37-45aa-aa9e-1f8ef9d9f439.png">
+</p>
+
+## Floorplan
+```
+% run_floorplan
+```
+<p align="center">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188394904-13ac4b8c-976b-4530-baa2-cbe57094195f.png">
 </p>
 
 ## Contributors 
 
 - **Ramya S** 
 - **Kunal Ghosh** 
-
 
 ## Acknowledgments
 
