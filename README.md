@@ -35,7 +35,7 @@ Initially all the FFs are at RESET state. When the PRESET is applied, the input 
 State diagram is used to describe the behaviour of the digital sequential circuits. It shows the transitions of states from one state to the next as well as the output for a given input.
 
 <p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/110991148/184102424-cc93c3e2-7248-4dfb-aacf-4d85c1079bfb.png">
+  <img width="200" height="200" src="https://user-images.githubusercontent.com/110991148/184102424-cc93c3e2-7248-4dfb-aacf-4d85c1079bfb.png">
 </p>
 
 ## About iverilog 
