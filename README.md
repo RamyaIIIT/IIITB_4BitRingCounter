@@ -213,7 +213,7 @@ $  cp ./libs/sky130A.tech sky130A.tech
 $ magic -T sky130A.tech sky130_inv.mag &
 ```
 <p align="center">
-  <img width="500" height="500" src="https://user-images.githubusercontent.com/110991148/188389306-2730a27b-a435-4dff-9a03-023520666d01.png">
+  <img width="400" height="500" src="https://user-images.githubusercontent.com/110991148/188389306-2730a27b-a435-4dff-9a03-023520666d01.png">
 </p>
 
 ## Physical Design using Openlane
