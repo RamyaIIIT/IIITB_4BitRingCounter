@@ -41,7 +41,6 @@ State diagram is used to describe the behaviour of the digital sequential circui
 ## About iverilog 
 Icarus Verilog is a simulator tool to check the design with the help of test bench. The design is nothing but the Verilog hardware description language code which specifies the functionality. The testbench is the setup to apply stimulus to test the functionality of the design. This simulator looks for the changes to the input. Upon changes to the input, the output is evaluated.
 
-
 <p align="center">
   <img width="600" height="200" src="https://user-images.githubusercontent.com/110991148/188372955-34ad0c1b-9cfb-48b8-ba87-63d5f3520a2b.png">
 </p>
@@ -50,7 +49,7 @@ Icarus Verilog is a simulator tool to check the design with the help of test ben
 GTKWave is a fully featured GTK+ v1. 2 based wave viewer for Unix and Win32 which reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing.
 
 <p align="center">
-  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187870366-ddc387b9-7812-41d5-bf90-9d9e74d0e0c7.jpg">
+  <img width="600" height="200" src="https://user-images.githubusercontent.com/110991148/188373214-2daeec8f-9bad-4f8d-90ba-93c9d239dfcf.png">
 </p>
 
 ## About yosys
