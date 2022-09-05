@@ -41,8 +41,9 @@ State diagram is used to describe the behaviour of the digital sequential circui
 ## About iverilog 
 Icarus Verilog is a simulator tool to check the design with the help of test bench. The design is nothing but the Verilog hardware description language code which specifies the functionality. The testbench is the setup to apply stimulus to test the functionality of the design. This simulator looks for the changes to the input. Upon changes to the input, the output is evaluated.
 
+
 <p align="center">
-  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/187870793-153cd6c8-2e44-4d59-b62c-631ae208ff75.jpg">
+  <img width="800" height="300" src="https://user-images.githubusercontent.com/110991148/188372598-0cfb39ff-295e-4a0f-9a0b-ed44dbdb85ea.png">
 </p>
 
 ## About GTKWave
